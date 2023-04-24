@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<!-- encoding -->
+	<meta charset="UTF-8" />
+	<!-- Mobile support -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- Title and SEO -->
+	<title>Портфолио</title>
+	<meta name="description" content="Описание страницы" />
+	<meta name="keywords" content="ключевые слова, фразы" />
+
+	<!-- Styles -->
+	<link rel="stylesheet" href="./css/main.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+	<!-- Open Graph -->
+	<!-- <meta property="og:url" content="https://webcademy.ru/" /> -->
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Туристическое агентство Форест Тревел" />
+	<meta property="og:description" content="Турпоходы по дикой природе" />
+	<meta property="og:image" content="./img/opengraph.jpg" />
+
+	<!-- Favicons -->
+	<link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="./img/favicon/site.webmanifest">
+	<link rel="mask-icon" href="./img/favicon/safari-pinned-tab.svg" color="#1a60cf">
+	<link rel="shortcut icon" href="./img/favicon/favicon.ico">
+	<meta name="msapplication-TileColor" content="#00aba9">
+	<meta name="msapplication-config" content="./img/favicon/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+	<div class="overlay" id="overlay"></div>
+	<div class="page-top">
+		<div class="container">
+			<div class="page-top__row">
+				<ul class="page-top__row-nav" id="page-menu">
+					<li class="page-top__nav-link"><a href="#acquaint">Навыки</a></li>
+					<li class="page-top__nav-link"><a href="#portfolio">Портфолио</a></li>
+					<li class="page-top__nav-link"><a href="#work">Как я работаю</a></li>
+					<li class="page-top__nav-link"><a href="#contacts">Контакты</a></li>
+				</ul>
+
+				<nav class="page-top__social">
+					<!-- <a class="page-top__social-link" href="#!">
+						<svg class="social-link__in" width="32" height="32" viewBox="0 0 32 32" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<g clip-path="url(#clip0_112_518)">
+								<path
+									d="M7.44897 10.2947H1.02492C0.739808 10.2947 0.508789 10.5258 0.508789 10.8108V31.4485C0.508789 31.7336 0.739808 31.9647 1.02492 31.9647H7.44897C7.73408 31.9647 7.9651 31.7336 7.9651 31.4485V10.8108C7.9651 10.5258 7.73408 10.2947 7.44897 10.2947Z"
+									fill="black" />
+								<path
+									d="M4.23907 0.0351562C1.90163 0.0351562 0 1.93472 0 4.26958C0 6.60548 1.90163 8.50576 4.23907 8.50576C6.57466 8.50576 8.47474 6.60538 8.47474 4.26958C8.47484 1.93472 6.57466 0.0351562 4.23907 0.0351562Z"
+									fill="black" />
+								<path
+									d="M23.7892 9.78174C21.209 9.78174 19.3017 10.8909 18.1449 12.1512V10.8108C18.1449 10.5258 17.9138 10.2947 17.6287 10.2947H11.4766C11.1915 10.2947 10.9604 10.5258 10.9604 10.8108V31.4485C10.9604 31.7336 11.1915 31.9647 11.4766 31.9647H17.8866C18.1717 31.9647 18.4027 31.7336 18.4027 31.4485V21.2376C18.4027 17.7968 19.3373 16.4563 21.7359 16.4563C24.3481 16.4563 24.5557 18.6053 24.5557 21.4147V31.4486C24.5557 31.7337 24.7867 31.9648 25.0718 31.9648H31.4842C31.7693 31.9648 32.0004 31.7337 32.0004 31.4486V20.1285C32.0004 15.0121 31.0248 9.78174 23.7892 9.78174Z"
+									fill="black" />
+							</g>
+							<defs>
+								<clipPath id="clip0_112_518">
+									<rect width="32" height="32" fill="white" />
+								</clipPath>
+							</defs>
+						</svg>
+					</a> -->
+					<a class="page-top__social-link" href="#!">
+						<svg class="social-link__kats" width="42" height="42" viewBox="0 0 42 42" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M21 0.875C9.3975 0.875 0 10.115 0 21.511C0 30.6303 6.0165 38.3635 14.3587 41.09C15.4087 41.2843 15.7937 40.6455 15.7937 40.0978C15.7937 39.6078 15.7763 38.3093 15.7675 36.589C9.926 37.8333 8.694 33.8205 8.694 33.8205C7.7385 31.4388 6.35775 30.8018 6.35775 30.8018C4.4555 29.5225 6.50475 29.5488 6.50475 29.5488C8.6135 29.6923 9.72125 31.675 9.72125 31.675C11.5938 34.8303 14.637 33.9185 15.8375 33.3918C16.0265 32.0565 16.5673 31.1483 17.1675 30.632C12.5038 30.1158 7.602 28.3413 7.602 20.4348C7.602 18.1825 8.41575 16.3415 9.76325 14.8977C9.527 14.3763 8.81825 12.278 9.947 9.436C9.947 9.436 11.7058 8.883 15.722 11.5518C17.402 11.0933 19.187 10.8658 20.972 10.8553C22.757 10.8658 24.542 11.0933 26.222 11.5518C30.212 8.883 31.9707 9.436 31.9707 9.436C33.0995 12.278 32.3908 14.3763 32.1807 14.8977C33.5195 16.3415 34.3332 18.1825 34.3332 20.4348C34.3332 28.3623 29.4245 30.107 24.752 30.6145C25.487 31.234 26.1695 32.4993 26.1695 34.433C26.1695 37.1945 26.1432 39.4135 26.1432 40.0838C26.1432 40.6245 26.5107 41.2703 27.587 41.0638C35.9888 38.3548 42 30.6163 42 21.511C42 10.115 32.5972 0.875 21 0.875Z"
+								fill="#212121" />
+						</svg>
+					</a>
+				</nav>
+			</div>
+			<div class="mobile-menu">
+				<div class="mobile-menu__container">
+					<nav class="mobile-menu__nav">
+						<ul class="nav__list">
+							<li class="nav__list-item"><a href="#acquaint">Навыки</a></li>
+							<li class="nav__list-item"><a href="#portfolio">Портфолио</a></li>
+							<li class="nav__list-item"><a href="#work">Как я работаю</a></li>
+							<li class="nav__list-item"><a href="#contacts">Контакты</a></li>
+						</ul>
+					</nav>
+					<nav class="mobile-menu__nav-social">
+						<a class="socials-contacts__nav-item" href="https://t.me/le_Chatic"><svg width="48" height="48"
+								viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g clip-path="url(#clip0_122_1087)">
+									<path
+										d="M24 48C37.2548 48 48 37.2548 48 24C48 10.7452 37.2548 0 24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48Z"
+										fill="#039BE5" />
+									<path
+										d="M10.9815 23.48L34.1216 14.558C35.1956 14.17 36.1336 14.82 35.7856 16.444L35.7875 16.442L31.8475 35.004C31.5555 36.32 30.7736 36.64 29.6796 36.02L23.6796 31.598L20.7855 34.386C20.4655 34.706 20.1955 34.976 19.5755 34.976L20.0015 28.87L31.1215 18.824C31.6056 18.398 31.0135 18.158 30.3755 18.582L16.6336 27.234L10.7095 25.386C9.42355 24.978 9.39555 24.1 10.9815 23.48Z"
+										fill="white" />
+								</g>
+								<defs>
+									<clipPath id="clip0_122_1087">
+										<rect width="48" height="48" fill="white" />
+									</clipPath>
+								</defs>
+							</svg>
+						</a>
+						<a class="socials-contacts__nav-item" href="https://vk.com/breadrevenge"><svg width="48"
+								height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g clip-path="url(#clip0_122_1078)">
+									<path
+										d="M24 48C37.2548 48 48 37.2548 48 24C48 10.7452 37.2548 0 24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48Z"
+										fill="#4D76A1" />
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M23.0933 34.5261H24.977C24.977 34.5261 25.546 34.4637 25.8365 34.1505C26.1039 33.863 26.0953 33.3231 26.0953 33.3231C26.0953 33.3231 26.0585 30.7955 27.2316 30.4233C28.388 30.0567 29.873 32.8662 31.447 33.9464C32.6372 34.764 33.5416 34.5847 33.5416 34.5847L37.7501 34.5261C37.7501 34.5261 39.9517 34.3905 38.9078 32.6595C38.8222 32.5179 38.2998 31.3791 35.7787 29.0389C33.1399 26.5896 33.4933 26.9858 36.672 22.749C38.6079 20.1688 39.3818 18.5936 39.1401 17.9189C38.9095 17.2763 37.4857 17.4462 37.4857 17.4462L32.7471 17.4757C32.7471 17.4757 32.3959 17.4278 32.1353 17.5835C31.8808 17.7362 31.7169 18.0922 31.7169 18.0922C31.7169 18.0922 30.967 20.0888 29.9667 21.7869C27.8567 25.3699 27.013 25.559 26.6682 25.3365C25.866 24.818 26.0662 23.2534 26.0662 22.142C26.0662 18.6697 26.5929 17.222 25.0408 16.8472C24.5257 16.7227 24.1466 16.6406 22.8293 16.6273C21.1386 16.6098 19.7075 16.6324 18.8972 17.0295C18.3582 17.2934 17.9423 17.8817 18.1956 17.9155C18.5088 17.9574 19.2181 18.1067 19.5941 18.6188C20.0797 19.2794 20.0626 20.7631 20.0626 20.7631C20.0626 20.7631 20.3416 24.8505 19.411 25.3583C18.7723 25.7066 17.8961 24.9955 16.015 21.7449C15.0511 20.0798 14.3234 18.2394 14.3234 18.2394C14.3234 18.2394 14.183 17.8954 13.9328 17.7114C13.629 17.4885 13.2046 17.4175 13.2046 17.4175L8.70178 17.447C8.70178 17.447 8.02582 17.4658 7.77768 17.7598C7.55693 18.0212 7.76014 18.5619 7.76014 18.5619C7.76014 18.5619 11.2854 26.8095 15.277 30.9658C18.937 34.7764 23.0933 34.5261 23.0933 34.5261Z"
+										fill="white" />
+								</g>
+								<defs>
+									<clipPath id="clip0_122_1078">
+										<rect width="48" height="48" fill="white" />
+									</clipPath>
+								</defs>
+							</svg>
+						</a>
+						<a class="socials-contacts__nav-item"
+							href="https://api.whatsapp.com/send?phone=79878371405&text=Привет! Ты клёвый!"><svg
+								width="48" height="48" viewBox="0 0 48 48" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<g clip-path="url(#clip0_122_1097)">
+									<path
+										d="M23.9871 0.0126382C10.7401 0.015449 0.00357906 10.7566 0.00638989 24.0036C0.00732684 28.5906 1.32364 33.0811 3.79905 36.9428L0.0672913 46.6251C-0.131435 47.1401 0.124914 47.7186 0.639859 47.9174C0.755009 47.9618 0.877281 47.9845 1.00068 47.9843C1.11517 47.9849 1.22882 47.9653 1.33648 47.9263L11.3306 44.3585C22.5751 51.3617 37.3677 47.9234 44.3709 36.6788C51.374 25.4342 47.9357 10.6416 36.6912 3.63852C32.8795 1.26449 28.4778 0.00823454 23.9871 0.0126382Z"
+										fill="#55CD6C" />
+									<path
+										d="M35.422 28.098C35.422 28.098 32.9735 26.8987 31.4404 26.0992C29.7054 25.2057 27.6666 26.8787 26.7072 27.8302C25.214 27.2566 23.8502 26.3908 22.6956 25.2837C21.5882 24.1292 20.7225 22.7654 20.1491 21.272C21.1005 20.3106 22.7695 18.2738 21.8801 16.5389C21.0905 15.0038 19.8813 12.5572 19.8813 12.5552C19.7116 12.2185 19.3669 12.0059 18.9898 12.0055H16.991C14.0801 12.5083 11.9636 15.0482 11.994 18.002C11.994 21.1401 15.7497 27.1686 18.2823 29.703C20.8148 32.2375 26.8433 35.9913 29.9833 35.9913C32.9371 36.0217 35.477 33.9051 35.9798 30.9943V28.9955C35.9801 28.6144 35.7638 28.2663 35.422 28.098Z"
+										fill="#FAFAFA" />
+								</g>
+								<defs>
+									<clipPath id="clip0_122_1097">
+										<rect width="48" height="48" fill="white" />
+									</clipPath>
+								</defs>
+							</svg>
+						</a>
+						<a class="text-link" href="mailto:pochtalexigagarina@mail.ru?body=Привет">
+							pochtalexigagarina@mail.ru
+						</a>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<div class="page-top__second-row">
+
+			<div class="second-row__logo">
+				<p>HTML Верстальщик</p>
+			</div>
+
+			<button class="page-top__nav-button">
+				<span class="nav-menu__icon-middle"></span>
+			</button>
+		</div>
+	</div>
+	<header class="header">
+		<div class="container">
+			<div class="header__info">
+				<div class="header__info-author">
+					<div class="header__info-title">
+						<h1 class="header-title gradient-line">Алексей Игнатьев</h1>
+					</div>
+					<p>Frontend-разработчик, верстальщик сайтов. Оперативная верстка. Работаю с
+						соблюдением сроков и выполнением ТЗ. Постоянно занимаюсь саморазвитием: интересуюсь современными технологиями в сфере веб-разработки.
+						С энтузиазмом берусь решать сложные и ответственные задачи, реализовывать интересные проекты.</p>
+					<div class="header__info-buttons">
+						<a href="#acquaint" class="button">Познакомиться</a>
+						<a href="#contacts" class="button button--wight">Контакты</a>
+					</div>
+				</div>
+				<div class="header__info-img">
+					<img src="./img/header/photo.jpg" alt="Author">
+				</div>
+				<p class="header-text">Frontend-разработчик, верстальщик сайтов. Оперативная верстка. Работаю с
+					соблюдением сроков и выполнением ТЗ. Постоянно занимаюсь саморазвитием: интересуюсь современными технологиями в сфере веб-разработки.
+					С энтузиазмом берусь решать сложные и ответственные задачи, реализовывать интересные проекты. </p>
+			</div>
+		</div>
+
+		<div class="header__banner">
+			<img src="./img/header/header.png" alt="Banner">
+		</div>
+
+
+		<div class="header__skils" id="acquaint">
+			<div class="container">
+				<div class="header__skils-row">
+
+					<div class="skils">
+						<div class="skils__title">
+							<h3 class="title-3">Что я умею:</h3>
+						</div>
+						<ul class="skils__list">
+							<li class="skils__list-item">pixel perfect, полное соответствие макету</li>
+							<li class="skils__list-item">адаптивная верстка под мобильные устройства</li>
+							<li class="skils__list-item">оптимизация по retina экраны</li>
+							<li class="skils__list-item">верстка с BEM и без него</li>
+							<li class="skils__list-item">использую современные технологии gulp, sass(scss), js</li>
+							<li class="skils__list-item">интеграция верстки на CMS Wordpress</li>
+						</ul>
+					</div>
+
+					<div class="socials-contacts">
+						<div class="socials-contacts__title">
+							<h3 class="title-3">На связи:</h3>
+						</div>
+						<div class="socials-contacts__nav">
+							<a class="socials-contacts__nav-item" href="https://t.me/le_Chatic"><svg width="48"
+									height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_122_1087)">
+										<path
+											d="M24 48C37.2548 48 48 37.2548 48 24C48 10.7452 37.2548 0 24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48Z"
+											fill="#039BE5" />
+										<path
+											d="M10.9815 23.48L34.1216 14.558C35.1956 14.17 36.1336 14.82 35.7856 16.444L35.7875 16.442L31.8475 35.004C31.5555 36.32 30.7736 36.64 29.6796 36.02L23.6796 31.598L20.7855 34.386C20.4655 34.706 20.1955 34.976 19.5755 34.976L20.0015 28.87L31.1215 18.824C31.6056 18.398 31.0135 18.158 30.3755 18.582L16.6336 27.234L10.7095 25.386C9.42355 24.978 9.39555 24.1 10.9815 23.48Z"
+											fill="white" />
+									</g>
+									<defs>
+										<clipPath id="clip0_122_1087">
+											<rect width="48" height="48" fill="white" />
+										</clipPath>
+									</defs>
+								</svg>
+							</a>
+							<a class="socials-contacts__nav-item" href="https://vk.com/breadrevenge"><svg width="48"
+									height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_122_1078)">
+										<path
+											d="M24 48C37.2548 48 48 37.2548 48 24C48 10.7452 37.2548 0 24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48Z"
+											fill="#4D76A1" />
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M23.0933 34.5261H24.977C24.977 34.5261 25.546 34.4637 25.8365 34.1505C26.1039 33.863 26.0953 33.3231 26.0953 33.3231C26.0953 33.3231 26.0585 30.7955 27.2316 30.4233C28.388 30.0567 29.873 32.8662 31.447 33.9464C32.6372 34.764 33.5416 34.5847 33.5416 34.5847L37.7501 34.5261C37.7501 34.5261 39.9517 34.3905 38.9078 32.6595C38.8222 32.5179 38.2998 31.3791 35.7787 29.0389C33.1399 26.5896 33.4933 26.9858 36.672 22.749C38.6079 20.1688 39.3818 18.5936 39.1401 17.9189C38.9095 17.2763 37.4857 17.4462 37.4857 17.4462L32.7471 17.4757C32.7471 17.4757 32.3959 17.4278 32.1353 17.5835C31.8808 17.7362 31.7169 18.0922 31.7169 18.0922C31.7169 18.0922 30.967 20.0888 29.9667 21.7869C27.8567 25.3699 27.013 25.559 26.6682 25.3365C25.866 24.818 26.0662 23.2534 26.0662 22.142C26.0662 18.6697 26.5929 17.222 25.0408 16.8472C24.5257 16.7227 24.1466 16.6406 22.8293 16.6273C21.1386 16.6098 19.7075 16.6324 18.8972 17.0295C18.3582 17.2934 17.9423 17.8817 18.1956 17.9155C18.5088 17.9574 19.2181 18.1067 19.5941 18.6188C20.0797 19.2794 20.0626 20.7631 20.0626 20.7631C20.0626 20.7631 20.3416 24.8505 19.411 25.3583C18.7723 25.7066 17.8961 24.9955 16.015 21.7449C15.0511 20.0798 14.3234 18.2394 14.3234 18.2394C14.3234 18.2394 14.183 17.8954 13.9328 17.7114C13.629 17.4885 13.2046 17.4175 13.2046 17.4175L8.70178 17.447C8.70178 17.447 8.02582 17.4658 7.77768 17.7598C7.55693 18.0212 7.76014 18.5619 7.76014 18.5619C7.76014 18.5619 11.2854 26.8095 15.277 30.9658C18.937 34.7764 23.0933 34.5261 23.0933 34.5261Z"
+											fill="white" />
+									</g>
+									<defs>
+										<clipPath id="clip0_122_1078">
+											<rect width="48" height="48" fill="white" />
+										</clipPath>
+									</defs>
+								</svg>
+							</a>
+							<a class="socials-contacts__nav-item"
+								href="https://api.whatsapp.com/send?phone=79878371405&text=Привет! Ты клёвый!"><svg
+									width="48" height="48" viewBox="0 0 48 48" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_122_1097)">
+										<path
+											d="M23.9871 0.0126382C10.7401 0.015449 0.00357906 10.7566 0.00638989 24.0036C0.00732684 28.5906 1.32364 33.0811 3.79905 36.9428L0.0672913 46.6251C-0.131435 47.1401 0.124914 47.7186 0.639859 47.9174C0.755009 47.9618 0.877281 47.9845 1.00068 47.9843C1.11517 47.9849 1.22882 47.9653 1.33648 47.9263L11.3306 44.3585C22.5751 51.3617 37.3677 47.9234 44.3709 36.6788C51.374 25.4342 47.9357 10.6416 36.6912 3.63852C32.8795 1.26449 28.4778 0.00823454 23.9871 0.0126382Z"
+											fill="#55CD6C" />
+										<path
+											d="M35.422 28.098C35.422 28.098 32.9735 26.8987 31.4404 26.0992C29.7054 25.2057 27.6666 26.8787 26.7072 27.8302C25.214 27.2566 23.8502 26.3908 22.6956 25.2837C21.5882 24.1292 20.7225 22.7654 20.1491 21.272C21.1005 20.3106 22.7695 18.2738 21.8801 16.5389C21.0905 15.0038 19.8813 12.5572 19.8813 12.5552C19.7116 12.2185 19.3669 12.0059 18.9898 12.0055H16.991C14.0801 12.5083 11.9636 15.0482 11.994 18.002C11.994 21.1401 15.7497 27.1686 18.2823 29.703C20.8148 32.2375 26.8433 35.9913 29.9833 35.9913C32.9371 36.0217 35.477 33.9051 35.9798 30.9943V28.9955C35.9801 28.6144 35.7638 28.2663 35.422 28.098Z"
+											fill="#FAFAFA" />
+									</g>
+									<defs>
+										<clipPath id="clip0_122_1097">
+											<rect width="48" height="48" fill="white" />
+										</clipPath>
+									</defs>
+								</svg>
+							</a>
+						</div>
+						<a class="text-link"
+							href="mailto:pochtalexigagarina@mail.ru?body=Привет">pochtalexigagarina@mail.ru</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<section class="section-portfolio" id="portfolio">
+			<div class="container">
+				<div class="section-portfolio__title">
+					<h2 class="section-title gradient-line">Портфолио</h2>
+				</div>
+				<div class="mix-block">
+					<div class="mix-block__btn">
+						<button type="button" data-filter="all">Все работы</button>
+						<button type="button" data-filter=".html">HTML верстка</button>
+						<button type="button" data-filter=".wp">WordPress</button>
+						<button type="button" data-filter=".js">Java Script</button>
+					</div>
+					<div class="section-portfolio__row" id="mix-cards">
+						<a href="./projects/forest-travel/index.html" class="card-link mix html" target="_blank">
+							<div class="card card--presented">
+								<div class="card__img">
+									<img src="./img/portfolio/forest-trevel.jpg" alt="Forest Travel">
+									<span>Смотреть проект</span>
+								</div>
+								<div class="card__title">
+									<h4 class="project-title">Верстка “Форест тревел”</h4>
+								</div>
+								<p>Верстка многостраничного сайта</p>
+							</div>
+						</a>
+						<a href="./projects/unit/index.html" class="card-link mix html" target="_blank">
+							<div class="card card--presented">
+								<div class="card__img">
+									<img src="./img/portfolio/unit.jpg" alt="Unit">
+									<span>Смотреть проект</span>
+								</div>
+								<div class="card__title">
+									<h4 class="project-title">Сайт приложения “Юнит”</h4>
+								</div>
+								<p>Верстка лендинга</p>
+							</div>
+						</a>
+						<a href="./projects/router/index.html" class="card-link mix js">
+							<div class="card card--presented">
+								<div class="card__img">
+									<img src="./img/portfolio/router.png" alt="Project">
+									<span>Смотреть проект</span>
+								</div>
+								<div class="card__title">
+									<h4 class="project-title">Роутер интернет-каталога</h4>
+								</div>
+								<p>Роутер для интернет-каталога квартир</p>
+							</div>
+						</a>
+						<a href="./projects/crm/table.html" class="card-link mix js">
+							<div class="card card--presented">
+								<div class="card__img">
+									<img src="./img/portfolio/crm.png" alt="Project">
+									<span>Смотреть проект</span>
+								</div>
+								<div class="card__title">
+									<h4 class="project-title">СRM заявки</h4>
+								</div>
+								<p>CRM, получение и редактирование заявок</p>
+							</div>
+						</a>
+						<a href="https://gefest-sar.ru" class="card-link mix js html">
+							<div class="card card--presented">
+								<div class="card__img">
+									<img src="./img/portfolio/gefest-sar.ru.png" alt="Project">
+									<span>Смотреть проект</span>
+								</div>
+								<div class="card__title">
+									<h4 class="project-title">Gefest-sar</h4>
+								</div>
+								<p>Интернет магазин банных печей</p>
+							</div>
+						</a>
+						<a href="./projects/autob/index.html" class="card-link mix wp">
+							<div class="card card--presented">
+								<div class="card__img">
+									<img src="./img/portfolio/autobd.png" alt="Project">
+									<span>Смотреть проект</span>
+								</div>
+								<div class="card__title">
+									<h4 class="project-title">AUTO EXPRESS</h4>
+								</div>
+								<p>Натяжка верстки на CSM Wordpress</p>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section-work" id="work">
+			<div class="container">
+
+				<div class="section-work__header">
+					<h2 class="section-title gradient-line">Как я работаю</h2>
+				</div>
+
+				<div class="container-work">
+					<ul class="how-work__list">
+						<li class="how-work__list-item">
+							<h5 class="list-item__title gradient-line">Оцениваю макет</h5>
+							<p class="how-wirk__list-text">Оцениваю объем работы, сложность, нюансы. Задаю вопросы.
+							</p>
+							<span class="list-item__time-work">Время: 2 часа</span>
+						</li>
+						<li class="how-work__list-item">
+							<h5 class="list-item__title gradient-line">ТЗ, смета и график работ</h5>
+							<p class="how-wirk__list-text">Согласовываем техническое задание и график работ по
+								проекту.
+								Осмечиваю стоимость по этапам работы.</p><span class="list-item__time-work">Время: 2
+								- 4
+								часа</span>
+						</li>
+						<li class="how-work__list-item">
+							<h5 class="list-item__title gradient-line">Вы держите руку на пульсе</h5>
+							<p class="how-wirk__list-text">Выдаю клиенту доступ к GitHub репозиторию и доске Trello.
+								Вы
+								в любое время можете видеть актуальное состояние проекта и задач.</p>
+						</li>
+						<li class="how-work__list-item">
+							<h5 class="list-item__title gradient-line">Выполняю каждый этап</h5>
+							<p class="how-wirk__list-text">Поочередно выполняю каждый этап работы. Передаю
+								результаты.
+								Заказчик производит поэтапную оплату.</p>
+						</li>
+						<li class="how-work__list-item">
+							<h5 class="list-item__title gradient-line">Финальное ревью проекта</h5>
+							<p class="how-wirk__list-text">Проект готов. Финальное ревью и полировка до идеального
+								состояния. Передаю файлы проекта, заливаю сайт на хостинг заказчика.</p><span
+								class="list-item__time-work">Время: 2 - 4 часа</span>
+						</li>
+				</div>
+			</div>
+			</div>
+		</section>
+
+		<section class="section-contacts" id="contacts">
+			<div class="container">
+				<div class="section-contacts__header">
+					<h2 class="section-title gradient-line">Контакты</h2>
+				</div>
+				<div class="section-row">
+					<div class="section-contacts__row">
+						<div class="contacts">
+							<ul class="contacts__communication-list">
+								<li class="communication-list__item"><span>Email</span><a class="text-link"
+										href="mailto:pochtalexigagarina@mail.ru?body=Привет">pochtalexigagarina@mail.ru</a>
+								</li>
+								<li class="communication-list__item"><span>Телефон</span><a class="text-link"
+										href="callto:+79878371405">+7 (987) 837-14-05</a></li>
+							</ul>
+						</div>
+						<div class="contacts-text">
+							<p>Если вы ищите специалиста по верстке сайтов или frontend разработчика в команду для работы
+								над проектом — напишите мне.
+							</p>
+							<div class="section-contacts__grafic">
+								<img src="./img/contacts/path-1.png" alt="Path">
+								<img src="./img/contacts/path-1.png" alt="Path">
+							</div>
+						</div>
+						<div class="socials-contacts__nav">
+							<a class="socials-contacts__nav-item" href="https://t.me/le_Chatic"><svg width="48" height="48"
+									viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_122_1087)">
+										<path
+											d="M24 48C37.2548 48 48 37.2548 48 24C48 10.7452 37.2548 0 24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48Z"
+											fill="#039BE5" />
+										<path
+											d="M10.9815 23.48L34.1216 14.558C35.1956 14.17 36.1336 14.82 35.7856 16.444L35.7875 16.442L31.8475 35.004C31.5555 36.32 30.7736 36.64 29.6796 36.02L23.6796 31.598L20.7855 34.386C20.4655 34.706 20.1955 34.976 19.5755 34.976L20.0015 28.87L31.1215 18.824C31.6056 18.398 31.0135 18.158 30.3755 18.582L16.6336 27.234L10.7095 25.386C9.42355 24.978 9.39555 24.1 10.9815 23.48Z"
+											fill="white" />
+									</g>
+									<defs>
+										<clipPath id="clip0_122_1087">
+											<rect width="48" height="48" fill="white" />
+										</clipPath>
+									</defs>
+								</svg>
+							</a>
+							<a class="socials-contacts__nav-item" href="https://vk.com/breadrevenge"><svg width="48"
+									height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_122_1078)">
+										<path
+											d="M24 48C37.2548 48 48 37.2548 48 24C48 10.7452 37.2548 0 24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48Z"
+											fill="#4D76A1" />
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M23.0933 34.5261H24.977C24.977 34.5261 25.546 34.4637 25.8365 34.1505C26.1039 33.863 26.0953 33.3231 26.0953 33.3231C26.0953 33.3231 26.0585 30.7955 27.2316 30.4233C28.388 30.0567 29.873 32.8662 31.447 33.9464C32.6372 34.764 33.5416 34.5847 33.5416 34.5847L37.7501 34.5261C37.7501 34.5261 39.9517 34.3905 38.9078 32.6595C38.8222 32.5179 38.2998 31.3791 35.7787 29.0389C33.1399 26.5896 33.4933 26.9858 36.672 22.749C38.6079 20.1688 39.3818 18.5936 39.1401 17.9189C38.9095 17.2763 37.4857 17.4462 37.4857 17.4462L32.7471 17.4757C32.7471 17.4757 32.3959 17.4278 32.1353 17.5835C31.8808 17.7362 31.7169 18.0922 31.7169 18.0922C31.7169 18.0922 30.967 20.0888 29.9667 21.7869C27.8567 25.3699 27.013 25.559 26.6682 25.3365C25.866 24.818 26.0662 23.2534 26.0662 22.142C26.0662 18.6697 26.5929 17.222 25.0408 16.8472C24.5257 16.7227 24.1466 16.6406 22.8293 16.6273C21.1386 16.6098 19.7075 16.6324 18.8972 17.0295C18.3582 17.2934 17.9423 17.8817 18.1956 17.9155C18.5088 17.9574 19.2181 18.1067 19.5941 18.6188C20.0797 19.2794 20.0626 20.7631 20.0626 20.7631C20.0626 20.7631 20.3416 24.8505 19.411 25.3583C18.7723 25.7066 17.8961 24.9955 16.015 21.7449C15.0511 20.0798 14.3234 18.2394 14.3234 18.2394C14.3234 18.2394 14.183 17.8954 13.9328 17.7114C13.629 17.4885 13.2046 17.4175 13.2046 17.4175L8.70178 17.447C8.70178 17.447 8.02582 17.4658 7.77768 17.7598C7.55693 18.0212 7.76014 18.5619 7.76014 18.5619C7.76014 18.5619 11.2854 26.8095 15.277 30.9658C18.937 34.7764 23.0933 34.5261 23.0933 34.5261Z"
+											fill="white" />
+									</g>
+									<defs>
+										<clipPath id="clip0_122_1078">
+											<rect width="48" height="48" fill="white" />
+										</clipPath>
+									</defs>
+								</svg>
+							</a>
+							<a class="socials-contacts__nav-item"
+								href="https://api.whatsapp.com/send?phone=79878371405&text=Привет! Ты клёвый!"><svg
+									width="48" height="48" viewBox="0 0 48 48" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_122_1097)">
+										<path
+											d="M23.9871 0.0126382C10.7401 0.015449 0.00357906 10.7566 0.00638989 24.0036C0.00732684 28.5906 1.32364 33.0811 3.79905 36.9428L0.0672913 46.6251C-0.131435 47.1401 0.124914 47.7186 0.639859 47.9174C0.755009 47.9618 0.877281 47.9845 1.00068 47.9843C1.11517 47.9849 1.22882 47.9653 1.33648 47.9263L11.3306 44.3585C22.5751 51.3617 37.3677 47.9234 44.3709 36.6788C51.374 25.4342 47.9357 10.6416 36.6912 3.63852C32.8795 1.26449 28.4778 0.00823454 23.9871 0.0126382Z"
+											fill="#55CD6C" />
+										<path
+											d="M35.422 28.098C35.422 28.098 32.9735 26.8987 31.4404 26.0992C29.7054 25.2057 27.6666 26.8787 26.7072 27.8302C25.214 27.2566 23.8502 26.3908 22.6956 25.2837C21.5882 24.1292 20.7225 22.7654 20.1491 21.272C21.1005 20.3106 22.7695 18.2738 21.8801 16.5389C21.0905 15.0038 19.8813 12.5572 19.8813 12.5552C19.7116 12.2185 19.3669 12.0059 18.9898 12.0055H16.991C14.0801 12.5083 11.9636 15.0482 11.994 18.002C11.994 21.1401 15.7497 27.1686 18.2823 29.703C20.8148 32.2375 26.8433 35.9913 29.9833 35.9913C32.9371 36.0217 35.477 33.9051 35.9798 30.9943V28.9955C35.9801 28.6144 35.7638 28.2663 35.422 28.098Z"
+											fill="#FAFAFA" />
+									</g>
+									<defs>
+										<clipPath id="clip0_122_1097">
+											<rect width="48" height="48" fill="white" />
+										</clipPath>
+									</defs>
+								</svg>
+							</a>
+						</div>
+					</div>
+					<form action="#" class="contacts-form">
+
+						<div class="form-item">
+							<span class="fake-placeholder">Ваш Email</span>
+							<input class="form-fild" name="email" type="email">
+						</div>
+	
+						<div class="form-item">
+							<span class="fake-placeholder">Сообщение</span>
+							<textarea class='form-fild' name="message" id="#" cols="30" rows="10"></textarea>
+						</div>
+	
+						<div class="form-item">
+							<input class="form-btn" type="submit" value="Отправить">
+						</div>
+					</form>
+					<div id="answer"></div>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__copuright">
+				<p class="text-copuright">&#169; 2023 — Игнатьев Алексей</p>
+			</div>
+			<div class="footer__text">
+				<p>Веб-разработчик из Москвы, занимаюсь версткой и созданием сайтов.</p>
+			</div>
+		</div>
+	</footer>
+	<a href="#top" class="backtop-btn" id="backtop">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<path
+				d="M256 504c137 0 248-111 248-248S393 8 256 8 8 119 8 256s111 248 248 248zm0-448c110.5 0 200 89.5 200 200s-89.5 200-200 200S56 366.5 56 256 145.5 56 256 56zm20 328h-40c-6.6 0-12-5.4-12-12V256h-67c-10.7 0-16-12.9-8.5-20.5l99-99c4.7-4.7 12.3-4.7 17 0l99 99c7.6 7.6 2.2 20.5-8.5 20.5h-67v116c0 6.6-5.4 12-12 12z" />
+		</svg>
+	</a>
+	<script src="./libs/jquery-3.6.1.min.js"></script>
+	<script src="./libs/nav.js"></script>
+	<script src="./libs/jqvalidate/jquery.validate.min.js"></script>
+	<script src="./libs/mixsitup/mixitup.min.js"></script>
+	<script src="./js/main.js"></script>
+</body>
+
+</html>

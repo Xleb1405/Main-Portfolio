@@ -1,0 +1,136 @@
+.header__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 99;
+
+  // Tablet
+  @media (max-width: 1199px) {
+    align-items: center;
+  }
+
+  // Mobile XS
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.header__info-title {
+  margin-bottom: 30px;
+
+  // Tablet
+  @media (max-width: 1199px) {
+    margin-bottom: 20px;
+  }
+
+  // Mobile
+  @media (max-width: 899px) {
+    margin-bottom: 10px;
+  }
+
+  // Mobile XS
+  @media (max-width: 768px) {
+    margin-bottom: 13px;
+  }
+}
+
+.header__info-author {
+  width: 540px;
+  z-index: 99;
+
+  // Tablet
+  @media (max-width: 1199px) {
+    width: 400px;
+  }
+
+  // Mobile
+  @media (max-width: 899px) {
+    width: 355px;
+  }
+
+  // Mobile XS
+  @media (max-width: 768px) {
+    width: 290px;
+  }
+}
+
+.header__info-author p {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.6;
+  margin-bottom: 35px;
+
+  // Tablet
+  @media (max-width: 1199px) {
+    font-size: 18px;
+    margin-bottom: 28px;
+  }
+
+  // Mobile
+  @media (max-width: 899px) {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+
+  // Mobile XS
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.header__info-img {
+  width: 475px;
+  height: 410px;
+  z-index: 99;
+  box-shadow: 25px 25px rgba(255, 255, 255, 0.5);
+
+  & img {
+    object-fit: cover;
+  }
+
+  // Tablet
+  @media (max-width: 1199px) {
+    width: 375px;
+    height: 325px;
+  }
+
+  // Mobile
+  @media (max-width: 899px) {
+    width: 290px;
+    height: 250px;
+  }
+
+  // Mobile XS
+  @media (max-width: 768px) {
+    margin-bottom: 10px;
+  }
+}
+
+.header-text {
+  display: none;
+
+  // Mobile XS
+  @media (max-width: 768px) {
+    display: block;
+    z-index: 99;
+  }
+}
+
+.header__info-buttons {
+  display: flex;
+  column-gap: 20px;
+}
+
+.visibl-text {
+  display: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+
+  // Mobile XS
+  @media (max-width: 768px) {
+    display: block;
+    width: 290px;
+    z-index: 99;
+  }
+}

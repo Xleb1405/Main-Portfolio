@@ -1,0 +1,155 @@
+.form-item {
+  position: relative;
+  margin-bottom: 42px;
+  padding-left: 50px;
+  padding-right: 50px;
+
+  // Mobile XS
+  @media (max-width: 768px) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  // Mobile XS
+  @media (max-width: 768px) {
+    margin-bottom: 30px;
+  }
+}
+
+.form-item:last-child {
+  margin-bottom: 0;
+}
+
+.fake-placeholder {
+  position: absolute;
+  top: 3px;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1;
+  color: #9d9d9d;
+  transition: 0.5s;
+
+  // Mobile
+  @media (max-width: 899px) {
+    font-size: 18px;
+  }
+}
+
+.fake-placeholder.active {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1;
+  color: #eca73f;
+  top: -20px;
+}
+
+.form-fild {
+  width: 440px;
+  border-bottom: 2px solid #e5e5e5;
+  &:active,
+  :focus {
+    border-bottom: 2px solid #ff543e;
+  }
+
+  // Tablet
+  @media (max-width: 1199px) {
+    width: 350px;
+  }
+
+  // Mobile XS
+  @media (max-width: 768px) {
+    width: 270px;
+  }
+}
+
+input {
+  height: 39px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1;
+  padding-left: 5px;
+  padding-right: 5px;
+
+  // Mobile
+  @media (max-width: 899px) {
+    font-weight: 600;
+  }
+
+  // Mobile XS
+  @media (max-width: 768px) {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.3;
+  }
+}
+
+textarea {
+  padding: 10px;
+  height: 162px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1;
+
+  // Mobile
+  @media (max-width: 899px) {
+    font-weight: 600;
+  }
+
+  // Mobile XS
+  @media (max-width: 768px) {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.3;
+  }
+}
+
+.form-btn {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.3;
+  height: 64px;
+  padding: 19px 40px;
+  border-radius: 50px;
+  background-color: #fbdc4d !important;
+
+  // Mobile
+  @media (max-width: 899px) {
+    font-size: 20px;
+    padding: 16px 71px;
+  }
+}
+
+.form-item:nth-child(2) {
+  margin-bottom: 21px;
+}
+
+label.error {
+    position: relative;
+    font-size: 14px;
+    font-weight: 700;
+    color: #d358e9;
+}
+
+.contact-form__success {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 2;
+
+  // Tablet
+  @media (max-width: 1199px) {
+    line-height: 1.5;
+    font-size: 35px;
+  }
+
+  // Mobile
+  @media (max-width: 899px) {
+    line-height: 2;
+    font-size: 30px;
+  }
+
+  // Mobile XS
+  @media (max-width: 768px) {
+    line-height: 1.5;
+    font-size: 25px;
+  }
+}

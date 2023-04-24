@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проект Юнит - таск менеджер</title>
+
+    <meta name="description" content="Описание страницы">
+    <meta name="keywords" content="ключевые слова, фразы">
+
+    <link rel="preload" href="./fonts/Montserrat/Montserrat-Bold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Montserrat/Montserrat-ExtraBold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Montserrat/Montserrat-Medium.woff2" as="font" crossorigin="anonymous">
+
+    <style>
+        .header::before{content:"";position:absolute;top:0;bottom:0;left:0;right:0;background-color:rgba(0,0,0,0.35)}*,*::before,*::after{box-sizing:border-box}html{height:100%;scroll-behavior:smooth}body{height:100%;display:-webkit-box;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;margin:0;font-family:'Montserrat', sans-serif;color:#2E2E2E}body>*{flex-shrink:0}.visually-hidden{width:0;height:0;position:absolute;left:-6000px}input,textarea,button{font-family:inherit;padding:0}label{cursor:pointer}h1,h2,h3,h4,h5,h6,p{margin:0}img{display:block;max-width:100%;height:auto}ul{margin:0;padding:0;list-style-type:none}fieldset{border:none;margin:0;padding:0}legend{display:block;padding:0;margin:0;border:none}.container{width:1200px;margin-left:auto;margin-right:auto;padding-left:15px;padding-right:15px}.header{position:relative;z-index:999;background-image:url("./../img/bg/header.jpg");background-size:cover;background-position:center}@media (max-width: 1600px){.header{background-image:url("./../img/bg/header-1600.jpg");background-size:cover;background-position:center}}@media (max-width: 1199px){.header{background-image:url("./../img/bg/header-900.jpg");background-size:cover;background-position:center}}@media (max-width: 899px){.header{background-image:url("./../img/bg/header-600.jpg");background-size:cover;background-position:center}}@media (max-width: 599px){.header{background-image:url("./../img/bg/header-320.jpg");background-size:cover;background-position:center}}.header__wrapper{display:-webkit-box;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;-webkit-box-align:center;align-items:center;padding-top:60px;padding-bottom:100px;position:relative;z-index:9;color:#fff}@media (max-width: 1199px){.header__wrapper{padding-bottom:50px}}@media (max-width: 899px){.header__wrapper{padding-top:20px}}@media (max-width: 599px){.header__wrapper{margin-bottom:-10px}}.header__buttons{display:-webkit-box;display:flex;-webkit-box-pack:justify;justify-content:space-between;margin-bottom:140px;width:1200px;padding-left:15px;padding-right:15px}@media (max-width: 1199px){.header__buttons{width:100%;margin-bottom:100px}}@media (max-width: 899px){.header__buttons{margin-bottom:30px}}.header__buttons-nav-icon{flex-shrink:0}.header__buttons-search{margin-left:auto}.header__content{text-align:center;margin-bottom:148px}@media (max-width: 1199px){.header__content{margin-bottom:129px}}@media (max-width: 899px){.header__content{margin-bottom:80px}}@media (max-width: 599px){.header__content{margin-bottom:50px}}.header__title{font-weight:700;font-size:96px;line-height:1;margin-bottom:40px}@media (max-width: 1199px){.header__title{margin-bottom:35px;font-size:84px}}@media (max-width: 899px){.header__title{font-size:70px;margin-bottom:33px}}.header__description{margin-bottom:70px;font-weight:700;margin-left:auto;margin-right:auto;font-size:20px;line-height:normal;max-width:730px}.header__description p{margin-bottom:15px}@media (max-width: 1199px){.header__description{margin-bottom:50px;font-size:18px}}@media (max-width: 899px){.header__description{font-size:16px;max-width:430px}}@media (max-width: 599px){.header__description{margin-bottom:33px}}.header__form{display:-webkit-box;display:flex;-webkit-box-pack:center;justify-content:center;margin-left:auto;margin-right:auto}@media (max-width: 899px){.header__form{width:370px;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;-webkit-box-align:stretch;align-items:stretch}}@media (max-width: 599px){.header__form{width:100%}}.header__form>*+*{margin-left:20px}@media (max-width: 899px){.header__form>*+*{margin-left:0;margin-top:20px}}.header__form-input{width:240px}@media (max-width: 899px){.header__form-input{width:100%}}.section-functional{padding-top:80px;padding-bottom:80px}@media (max-width: 1199px){.section-functional{padding-top:50px;padding-bottom:50px}}@media (max-width: 599px){.section-functional{padding-top:40px;padding-bottom:40px}}.section-functional__header{margin-bottom:70px;text-align:center}@media (max-width: 1199px){.section-functional__header{margin-bottom:60px}}@media (max-width: 899px){.section-functional__header{margin-bottom:40px}}.section-functional__title{margin-bottom:40px}@media (max-width: 1199px){.section-functional__title{margin-bottom:30px}}@media (max-width: 899px){.section-functional__title{margin-bottom:20px}}@media (max-width: 599px){.section-functional__title{margin-bottom:10px}}.section-functional__row{display:-webkit-box;display:flex;margin-left:-15px;margin-right:-15px;flex-wrap:wrap}@media (max-width: 899px){.section-functional__row{margin-top:-27px;-webkit-box-pack:center;justify-content:center}}@media (max-width: 599px){.section-functional__row{margin-top:-40px}}.section-functional__row>*{margin-left:15px;margin-right:15px;flex-shrink:0;width:270px}@media (max-width: 1199px){.section-functional__row>*{width:195px}}@media (max-width: 899px){.section-functional__row>*{width:270px;margin-top:30px}}@media (max-width: 599px){.section-functional__row>*{width:290px;margin-top:40px}}.nav{position:fixed;top:-100%;left:0;width:100%;height:100%;background-color:rgba(0,0,0,0.9);opacity:0;display:-webkit-box;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;color:#FFFFFF;text-align:center;transition:opacity 0.2s ease-in,top 0s linear 0.2s}.nav.nav--active{z-index:99;top:0;opacity:1;transition:top 0s linear, opacity .2s ease-in}.nav__top{margin-bottom:50px;font-weight:700;font-size:18px;line-height:1;letter-spacing:4px;text-transform:uppercase;color:#15D784}@media (max-width: 599px){.nav__top{font-size:16px;margin-bottom:30px}}.nav__list{font-weight:700;font-size:24px;line-height:1}@media (max-width: 599px){.nav__list{font-size:18px}}.nav__list li{margin-bottom:40px}@media (max-width: 599px){.nav__list li{margin-bottom:30px}}.nav__list a{text-decoration:none;color:#fff;transition:color 0.2s ease-in}.nav__list a:hover{color:#15D784}.nav-icon{width:60px;height:60px;display:-webkit-box;display:flex;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;background-color:#fff;border-radius:50%;border:none;transition:background-color 0.2s ease-in;cursor:pointer}.nav-icon:hover{background-color:#00C470}.nav-icon:hover .nav-icon__middle,.nav-icon:hover .nav-icon__middle::before,.nav-icon:hover .nav-icon__middle::after{background-color:#FFF}.nav-icon:focus{outline:none}.nav-icon__middle{position:relative;width:20px;height:3px;background-color:#000;border-radius:2px;transition:background-color 0.2s ease-in}.nav-icon__middle::before,.nav-icon__middle::after{content:"";position:absolute;left:0;width:20px;height:3px;transition:top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;transition:transform 0.2s ease-in, top 0.2s linear 0.2s;transition:transform 0.2s ease-in, top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;background-color:#000;border-radius:2px;transition:background-color 0.2s ease-in}.nav-icon__middle::before{top:-7px}.nav-icon__middle::after{top:7px}.nav-icon.nav-icon--active{position:fixed;z-index:999}.nav-icon.nav-icon--active .nav-icon__middle{background-color:transparent}.nav-icon.nav-icon--active .nav-icon__middle::before,.nav-icon.nav-icon--active .nav-icon__middle::after{top:0;transition:top 0.2s linear, -webkit-transform 0.2s ease-in 0.2s;transition:top 0.2s linear, transform 0.2s ease-in 0.2s;transition:top 0.2s linear, transform 0.2s ease-in 0.2s, -webkit-transform 0.2s ease-in 0.2s}.nav-icon.nav-icon--active .nav-icon__middle::before{-webkit-transform:rotate(45deg);transform:rotate(45deg)}.nav-icon.nav-icon--active .nav-icon__middle::after{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}.search{position:relative;z-index:9}.search__input{width:0px;height:60px;padding-left:30px;padding-right:30px;border:none;background:#FFFFFF;border-radius:30px;font-weight:500;font-size:16px;line-height:60px;color:#000000;transition:width 0.2s ease-in}.search__input::-webkit-input-placeholder{color:rgba(46,46,46,0.5)}.search__input:-ms-input-placeholder{color:rgba(46,46,46,0.5)}.search__input::-ms-input-placeholder{color:rgba(46,46,46,0.5)}.search__input::placeholder{color:rgba(46,46,46,0.5)}.search__input:focus{outline:none}.search__button{position:absolute;top:0;right:0;display:-webkit-box;display:flex;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;height:60px;width:60px;border-radius:50%;background-color:#fff;border:none;cursor:pointer;transition:background-color 0.2s ease-in}.search__button:hover{background-color:#00C470}.search__button:hover .search__button-icon{stroke:#fff}.search__button:focus{outline:none}.search__button-icon{stroke:black;transition:stroke 0.2s ease-in}.search.search--visible .search__input{width:340px;padding-left:30px;padding-right:70px}@media (max-width: 599px){.search.search--visible .search__input{width:220px;padding-left:20px;font-size:14px}}.search.search--visible .search__button{background-color:#00C470}.search.search--visible .search__button .search__button-icon{stroke:white}.search.search--visible .search__button:hover{background-color:#15D784}.input{display:block;height:60px;padding-left:30px;padding-right:30px;background-color:rgba(0,0,0,0.75);border-radius:30px;border:none;font-weight:700;font-size:14px;line-height:60px;color:#FFFFFF}@media (max-width: 899px){.input{padding-left:45px}}@media (max-width: 599px){.input{padding-left:36px}}.input::-webkit-input-placeholder{color:#FFFFFF}.input:-ms-input-placeholder{color:#FFFFFF}.input::-ms-input-placeholder{color:#FFFFFF}.input::placeholder{color:#FFFFFF}.input:focus{outline:none;background-color:#000}.button{display:inline-block;height:60px;padding-left:40px;padding-right:40px;border-radius:30px;border:none;background-color:#00C470;font-weight:800;font-size:14px;line-height:60px;letter-spacing:4px;text-transform:uppercase;color:#FFFFFF;transition:0.5s;text-decoration:none;cursor:pointer}.button:hover{background-color:#00ad62}.button:focus{outline:none;background-color:#00a05a}.title{font-weight:700;font-size:16px;line-height:1;letter-spacing:4px;text-transform:uppercase;color:#15D784}@media (max-width: 899px){.title{font-size:14px}}.subtitle{font-weight:700;font-size:48px;line-height:1}@media (max-width: 1199px){.subtitle{font-size:38px}}@media (max-width: 899px){.subtitle{font-size:30px}}@media (max-width: 599px){.subtitle{font-size:26px}}.card{display:block;text-align:center}.card__img{margin-left:auto;margin-right:auto;margin-bottom:40px}@media (max-width: 1199px){.card__img{margin-bottom:20px}}.card__title{margin-bottom:20px;font-weight:700;font-size:16px;line-height:1}@media (max-width: 1199px){.card__title{margin-bottom:10px;min-height:48px;line-height:1.5}}@media (max-width: 899px){.card__title{min-height:unset}}.card__text{font-weight:500;font-size:14px;line-height:2.14;color:gray}@media (max-width: 1199px){.card__text{line-height:1.57}}
+    </style>
+
+    <!-- <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content=""> -->
+</head>
+
+<body>
+
+    <header class="header">
+       <div class="header__wrapper">
+
+            <div class="header__buttons">
+
+                <button class="header__buttons-nav-icon nav-icon" aria-label="Navigation">
+                    <span class="nav-icon__middle"></span>
+                </button>
+
+                <!-- Навигация -->
+                <nav class="nav">
+                    <div class="nav__top">навигация по сайту</div>
+                    <ul class="nav__list">
+                        <li><a href="#functional">Функционал</a></li>
+                        <li><a href="#control">Гибкое управление</a></li>
+                        <li><a href="#focus">Всегда в фокусе</a></li>
+                        <li><a href="#price">Цены</a></li>
+                        <li><a href="#clients">Отзывы клиентов</a></li>
+                    </ul>
+                </nav>
+
+                <form class="header__buttons-search search">
+                    <label for="searchInput" class="visually-hidden">Поиск на сайте</label>
+                    <input type="text" class="search__input" placeholder="Введите текст для поиска" id="searchInput">
+                    <button class="search__button" aria-label="Search">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g class="search__button-icon">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.70001 13.2C10.7376 13.2 13.2 10.7375 13.2 7.69995C13.2 4.66239 10.7376 2.19995 7.70001 2.19995C4.66245 2.19995 2.20001 4.66239 2.20001 7.69995C2.20001 10.7375 4.66245 13.2 7.70001 13.2Z" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16.8 18.4L11.2 12" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </g>
+                        </svg>
+                    </button>
+                </form>
+        
+            </div>
+
+            <div class="container header__content">
+
+                <h1 class="header__title">ЮНИТ</h1>
+                <div class="header__description">
+                   <p>Управляй задачами и проектами из любой точки вместе с ЮНИТ. 
+                    Дома. На работе. В дороге. Онлайн. Оффлайн.</p> 
+                </div>
+                
+                <form class="header__form">
+                    <label for="inputName" class="visually-hidden">Введите имя</label>
+                    <input type="text" class="header__form-input input" placeholder="Ваше имя" id="inputName">
+                    <label for="inputEmail" class="visually-hidden">Введите Email</label>
+                    <input type="email" class="header__form-input input" placeholder="Email" id="inputEmail">
+                    <button type="submit" class="button" aria-label="Start trial">начать триал</button>
+                </form>
+
+            </div>
+
+            <div class="header__scroll">
+                <a href="#functional">
+                    <img src="./img/header/mouse.svg" alt="Scroll down" width="32" height="48">
+                </a>
+            </div>
+
+       </div>
+    </header>
+
+    <section class="section-functional" id="functional">
+
+        <div class="container">
+
+            <header class="section-functional__header">
+                    <h2 class="section-functional__title title">функционал</h2>
+                    <h3 class="subtitle">Получайте больше</h3>
+            </header>
+            
+            <div class="section-functional__row">
+                <div class="card">
+                    <img class="card__img" src="./img/functional/file-check.svg" alt="Создан для управления" width="64" height="64">
+                    <h4 class="card__title">Создан для управления</h4>
+                    <p class="card__text">Согласно ставшей уже классической работе Филипа Котлера, рекламная площадка отталкивает рейтинг.</p>
+                </div>
+                <div class="card">
+                    <img class="card__img" src="./img/functional/microphone.svg" alt="Голосовое управление" width="64" height="64">
+                    <h4 class="card__title">Голосовое управление</h4>
+                    <p class="card__text">Согласно ставшей уже классической работе Филипа Котлера, рекламная площадка отталкивает рейтинг.</p>
+                </div>
+                <div class="card">
+                    <img class="card__img" src="./img/functional/money.svg" alt="Контроль бюджета" width="64" height="64">
+                    <h4 class="card__title">Контроль бюджета</h4>
+                    <p class="card__text">Согласно ставшей уже классической работе Филипа Котлера, рекламная площадка отталкивает рейтинг.</p>
+                </div>
+                <div class="card">
+                    <img class="card__img" src="./img/functional/chart-pie.svg" alt="Статистика и графики" width="64" height="64">
+                    <h4 class="card__title">Статистика и графики</h4>
+                    <p class="card__text">Согласно ставшей уже классической работе Филипа Котлера, рекламная площадка отталкивает рейтинг.</p>
+                </div>
+            </div>
+            
+        </div>
+
+    </section>
+
+    <section class="section-cta">
+        <div class="section-cta__content">
+            <div class="container">
+                <h2 class="section-cta__title">
+                    Начните использовать <span>ЮНИТ</span> уже сегодня.
+                </h2>
+                <a href="#price" class="button" aria-label="Apply form">Подключить</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-tasks" id="control">
+        <div class="container">
+            <div class="section-tasks__row">
+                <div class="section-tasks__content">
+                    <header class="section-tasks__header">
+                            <h2 class="section-tasks__title title">гибкое управление</h2>
+                            <h3 class="subtitle">Задачи и подзадачи</h3>
+                    </header>
+                    <div class="section-tasks__text">
+                        <p>Тактика выстраивания отношений с коммерчекими агентами, вопреки мнению П.Друкера, искажает продвигаемый отраслевой стандарт. Стратегический рыночный план традиционно масштабирует комплексный имидж. Спонсорство развивает формат события.</p>
+                    </div>
+                </div>
+                <div class="section-tasks__img">
+                    <img src="./img/devices/iphone.jpg" alt="iphone" width="356" height="602">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-focus" id="focus">
+        <div class="container">
+            <div class="section-focus__row">
+                <div class="section-focus__img">
+                    <img src="./img/devices/ipad.jpg" alt="ipad" width="570" height="454">
+                </div>
+                <div class="section-focus__content">
+                    <header class="section-focus__header">
+                            <h2 class="section-focus__title title">всегда в фокусе</h2>
+                            <h3 class="subtitle">Множественные приоритеты</h3>
+                    </header>
+                    <div class="section-focus__text">
+                        <p>Потребление существенно продуцирует рыночный традиционный канал. В соответствии с законом Ципфа, маркетинг основан на тщательном анализе данных. Наряду с этим, целевой трафик конкурентоспособен.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-price" id="price">
+        <div class="section-price__content">
+            <div class="container">
+                <header class="section-price__header">
+                        <h2 class="section-price__title title">цены</h2>
+                        <h3 class="subtitle">Выберите подходящий план</h3>
+                </header>
+                <div class="section-price__row">
+                    <div class="package">
+                        <div class="package__header">
+                            <h4 class="package__title">Базовый</h4>
+                            <span class="package__price">15</span>
+                            <span class="package__period">$/мес</span>
+                        </div>
+                        <ul class="package__list">
+                            <li class="package__list-item">10 проектов</li>
+                            <li class="package__list-item">5 участников</li>
+                            <li class="package__list-item">∞ количество задач</li>
+                            <li class="package__list-item">5 GB медиа хранилище </li>
+                            <li class="package__list-item">Поддержка по Email</li>
+                        </ul>
+                        <div class="package__button">
+                            <button class="button-outline" aria-label="Cgoose option">Выбрать</button>
+                        </div>
+                    </div>
+                    <div class="package package--special">
+                        <div class="package__header">
+                            <h4 class="package__title">Стандарт</h4>
+                            <span class="package__price">65</span>
+                            <span class="package__period">$/мес</span>
+                        </div>
+                        <ul class="package__list">
+                            <li class="package__list-item">50 проектов</li>
+                            <li class="package__list-item">10 участников</li>
+                            <li class="package__list-item">∞ количество задач</li>
+                            <li class="package__list-item">25 GB медиа хранилище </li>
+                            <li class="package__list-item">Поддержка по Email</li>
+                        </ul>
+                        <div class="package__button">
+                            <button class="button-solid" aria-label="Cgoose option">Выбрать</button>
+                        </div>
+                    </div>
+                    <div class="package">
+                        <div class="package__header">
+                            <h4 class="package__title">Премиум</h4>
+                            <span class="package__price">125</span>
+                            <span class="package__period">$/мес</span>
+                        </div>
+                        <ul class="package__list">
+                            <li class="package__list-item">100 проектов</li>
+                            <li class="package__list-item">30 участников</li>
+                            <li class="package__list-item">∞ количество задач</li>
+                            <li class="package__list-item">50 GB медиа хранилище </li>
+                            <li class="package__list-item">Поддержка по Email</li>
+                        </ul>
+                        <div class="package__button">
+                            <button class="button-outline" aria-label="Cgoose option">Выбрать</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-clients" id="clients">
+        <div class="container">
+            <header class="section-clients__header">
+                    <h2 class="section-clients__title title">наши клиенты</h2>
+                    <h3 class="subtitle">Что говорят пользователи</h3>
+            </header>
+            <div class="section-clients__slider">
+                
+                        <button class="slider__arrow slider__arrow--left" id="sliderPrev" aria-label="Show previous">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 12H4" stroke="#00C470" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M10 18L4 12L10 6" stroke="#00C470" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>  
+                        </button>
+                        <button class="slider__arrow slider__arrow--right" id="sliderNext" aria-label="Show next">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 12H20" stroke="#00C470" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M14 6L20 12L14 18" stroke="#00C470" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+
+                        <!-- <div class="slider__pagination">
+                            <button class="slider__pagination-item"></button>
+                            <button class="slider__pagination-item slider__pagination-item--active"></button>
+                            <button class="slider__pagination-item"></button>
+                            <button class="slider__pagination-item"></button>
+                            <button class="slider__pagination-item"></button>
+                        </div> -->
+                        
+                        <!-- Слайдер -->
+                <div class="slider owl-carousel owl-theme" id="clients-slider">
+                    <div class="slider-item">
+                        <div class="slider-item__text">
+                            <p> Это потрясающее приложение которое помогло мне завершить все мои дела, и сделать дипломный проект раньше срока. </p>
+                        </div>
+                        <div class="slider-item__author">
+                            <div class="slider-item__avatar">
+                                <img src="./img/users/users-01.jpg" alt="Avatar" width="80" height="80">
+                            </div>
+                            <div class="slider-item__author-desc">
+                                <span class="slider-item__author-title">Фрилансер</span>
+                                <span class="slider-item__author-name">Николай Остапов</span>
+                            </div>
+                        </div>
+                    </div>
+                        <!-- slider item -->
+                    <div class="slider-item">
+                        <div class="slider-item__text">
+                            <p> Это потрясающее приложение которое помогло мне завершить все мои дела, и сделать дипломный проект раньше срока. </p>
+                        </div>
+                        <div class="slider-item__author">
+                            <div class="slider-item__avatar">
+                                <img src="./img/users/users-01.jpg" alt="Avatar" width="80" height="80">
+                            </div>
+                            <div class="slider-item__author-desc">
+                                <span class="slider-item__author-title">Фрилансер</span>
+                                <span class="slider-item__author-name">Николай Остапов</span>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- slider item -->
+                    <div class="slider-item">
+                        <div class="slider-item__text">
+                            <p> Это потрясающее приложение которое помогло мне завершить все мои дела, и сделать дипломный проект раньше срока. </p>
+                        </div>
+                        <div class="slider-item__author">
+                            <div class="slider-item__avatar">
+                                <img src="./img/users/users-01.jpg" alt="Avatar" width="80" height="80">
+                            </div>
+                            <div class="slider-item__author-desc">
+                                <span class="slider-item__author-title">Фрилансер</span>
+                                <span class="slider-item__author-name">Николай Остапов</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__row">
+                <nav class="footer__nav">
+                    <a class="footer__nav-item" href="#">о нас</a>
+                    <a class="footer__nav-item" href="#">блог</a>
+                    <a class="footer__nav-item" href="#">контакты</a>
+                </nav>
+                <div class="footer__social">
+                    <a class="footer__social-item" href="#"><img src="./img/social/twitter.svg" alt="Twitter" width="24" height="24"></a>
+                    <a class="footer__social-item" href="#"><img src="./img/social/facebook.svg" alt="Facebook" width="24" height="24"></a>
+                    <a class="footer__social-item" href="#"><img src="./img/social/instagram.svg" alt="Instagram" width="24" height="24"></a>
+                    <a class="footer__social-item" href="#"><img src="./img/social/vk.svg" alt="Vk"></a>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                <p>Копирайт &#169; 2019 ЮНИТ. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <link rel="stylesheet" href="./css/main.css">
+   
+    <!-- owlCarousel -->
+    <link rel="stylesheet" href="./libs/owlCarousel2/assets/owl.carousel.min.css">
+    <script>
+        (function(){
+            function getScript(url, success){
+                var script = document.createElement('script');
+                script.src = url;
+                var head = document.getElementsByTagName('head')[0], done = false;
+                script.onload = script.onreadystatechange = function(){
+                    if ( !done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete') ) {
+                        done=true;
+                        success();
+                        script.onload = script.onreadystatechange = null;
+                        head.removeChild(script);
+                    }
+                }
+                head.appendChild(script);
+            } //getScript
+
+            let scrollFlag = true;
+            window.addEventListener('scroll', function(){
+                // Расположение искомого элемента на странице
+                const clientsSection = document.querySelector('#clients');
+                function getCoords(elem) {
+                    let box = elem.getBoundingClientRect();
+                    return {
+                        top: box.top + pageYOffset,
+                        left: box.left + pageXOffset
+                    };
+                }
+                const coords = getCoords(clientsSection);
+
+                // Скроллинг страницы до элемента, нижняя граница окна
+                let scrolledTo = pageYOffset + document.documentElement.clientHeight;
+
+                // Когда доскролили до нужного элемента
+                if ( scrolledTo >= coords.top && scrollFlag) {
+                    scrollFlag = false;
+                    getScript('./libs/jquery-3.6.1.min.js',function(){
+                        getScript('./libs/owlCarousel2/owl.carousel.min.js', function(){
+                            getScript('./js/clients-carousel.js', ()=>{});
+                        })
+                    });
+                }
+
+            });
+        })();
+    </script>
+    <script src="./js/nav.js"></script>
+    <script src="./js/search.js"></script>
+</body>
+
+</html>

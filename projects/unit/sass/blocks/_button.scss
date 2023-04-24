@@ -1,0 +1,30 @@
+.button {
+    display: inline-block;
+    height: 60px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 30px;
+    border: none;
+
+    background-color: #00C470;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 60px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    transition: 0.5s;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    &:hover {
+        background-color: #00ad62;
+    }
+    
+    &:focus {
+        outline: none;
+        background-color: #00a05a;
+    }
+}
+

@@ -1,0 +1,75 @@
+.footer {
+  padding-top: 40px;
+  padding-bottom: 50px;
+  background-color: #333333;
+
+  // Tablet
+  @media (max-width: 1199px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.footer__copuright {
+    margin-bottom: 10px;
+
+    // Tablet
+    @media (max-width: 1199px) {
+      margin-bottom: 12px;
+    }
+
+    // Mobile
+    @media (max-width: 899px) {
+      margin-bottom: 5px;
+    }
+
+    // Mobile XS
+    @media (max-width: 768px) {
+      margin-bottom: 10px;
+    }
+}
+
+.text-copuright {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #ffffff;
+
+  // Tablet
+  @media (max-width: 1199px) {
+    font-size: 16px;
+  }
+}
+
+.footer__text p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #b0b0b0;
+  & > a {
+    color: #FFFFFF;
+    text-decoration: underline;
+  }
+
+  // Tablet
+  @media (max-width: 1199px) {
+    font-size: 14px;
+  }
+
+  // Mobile
+  @media (max-width: 899px) {
+    line-height: 34px;
+  }
+
+  // Mobile XS
+  @media (max-width: 768px) {
+    line-height: 1.5;
+  }
+}
+
+.footer__text p + p {
+  // Mobile XS
+  @media (max-width: 768px) {
+    margin-top: 15px;
+  }
+}

@@ -1,0 +1,93 @@
+.search {
+    position: relative;
+    z-index: 9;
+}
+
+.search__input {
+    width: 0px;
+    height: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: none;
+    background: #FFFFFF;
+    border-radius: 30px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 60px;
+    color: #000000;
+
+    transition: width 0.2s ease-in;
+
+    &::placeholder {
+        color: rgba(46, 46, 46, 0.5);
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.search__button {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: none;
+    cursor:  pointer;
+
+    transition: background-color 0.2s ease-in;
+
+    &:hover {
+        background-color: #00C470;
+
+        .search__button-icon {
+            stroke: rgb(255, 255, 255);
+        }
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.search__button-icon {
+    stroke: black;
+    transition: stroke 0.2s ease-in;
+}
+
+// Активное состояние формы с поиском
+.search.search--visible {
+    .search__input {
+        width: 340px;
+        padding-left: 30px;
+        padding-right: 70px;
+
+        // Mobile XS
+        @media (max-width: 599px) {
+            width: 220px;
+            padding-left: 20px;
+            font-size: 14px;
+        }
+    }
+
+    .search__button {
+        background-color: #00C470;
+
+        .search__button-icon {
+            stroke: white;
+        }
+
+        &:hover {
+            background-color: #15D784;
+        }
+    }
+}

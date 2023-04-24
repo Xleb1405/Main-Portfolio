@@ -1,0 +1,139 @@
+html {
+    min-height: 100vh; /* sticky footer */
+	scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+	min-height: 100vh; /* sticky footer */
+	display: flex; /* sticky footer */
+	flex-direction: column; /* sticky footer */
+
+	font-family: 'Montserrat', sans-serif;
+    color: $black-color;
+    font-size: 16px;
+    line-height: 1.6875;
+
+    text-rendering: optimizeSpeed;
+    //text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+body > * {
+	flex-shrink: 0; /* sticky footer */
+}
+
+body.noscroll {
+    overflow: hidden;
+}
+
+.overlay {
+    background-color: rgba(37, 73, 116, 0.8);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 900;
+    display: none;
+}
+
+.overlay.active {
+    display: block;
+}
+
+/* Grid styles */
+
+.container {
+	max-width: 1140px;
+    width: 100%;
+	margin-left: auto;
+    margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+
+    &--fluid {
+        max-width: unset;
+    }
+
+    &--no-padding {
+        padding: 0;
+    }
+
+    /* Tablet */
+    @media (max-width: 1199px) {
+        width: 900px;
+    }
+
+    /* Mobile */
+    @media (max-width: 899px) {
+        width: 768px;
+    }
+
+    /* Mobile XS */
+    @media (max-width: 599px) {
+        width: 320px;
+    }
+}
+
+/* Utility */
+
+.none {
+	display: none !important;
+}
+
+.visually-hidden {
+    opacity: 0;
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+    display: block;
+    margin-left: -10000px;
+    background: transparent;
+    font-size: 0;
+}
+
+/* Sticky Footer */
+
+// .footer {
+// 	margin-top: auto; /* sticky footer */
+
+// 	/* Just for fun */
+// 	text-align: center;
+// 	background-color: #e2e2e2;
+// 	padding: 50px 0;
+// }
+
+.gradient-line {
+    display: inline;
+    background-repeat: no-repeat;
+    background-position: center bottom 15px;
+    transition: 0.5s;
+    background-size: 0 10px;
+    background-image: linear-gradient(to left,#FBDC4D,#FBDC4D);
+
+    // &:hover {
+        background-size: 115% 10px;
+    // }
+
+    // Tablet
+    @media (max-width: 1199px) {
+        background-position: center bottom 11px;
+    }
+
+    // Mobile
+    @media (max-width: 899px) {
+        background-position: center bottom 7px;
+        background-size: 115% 8px;
+    }
+
+    // Mobile XS
+    @media (max-width: 599px) {
+        background-position: center bottom 4px;
+        background-size: 115% 7px;
+    }
+}
+

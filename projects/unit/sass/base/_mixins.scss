@@ -1,0 +1,22 @@
+@mixin transform($property) {
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+}
+
+@mixin bgImage ($name) {
+    // background-image: url("./../img/bg/price-bg.jpg");
+    background-image: url($name);
+    background-size: cover;
+    background-position: center;
+}
+
+%overlay {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.35);
+}

@@ -1,0 +1,45 @@
+.nav-menu__icon-middle {
+    position: relative;
+    width: 40px;
+    height: 5px;
+    background-color: black;
+    z-index: 9999;
+}
+
+.nav-menu__icon-middle::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 40px;
+    height: 5px;
+    background-color: black;
+    bottom: 10px;
+    transition: transform 0.2s ease-in, bottom 0.2s linear 0.2s;
+}
+
+.nav-menu__icon-middle::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 40px;
+    height: 5px;
+    background-color: black;
+    top: 10px;
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+}
+
+.nav-menu__icon-middle.active {
+    background-color: transparent;
+}
+
+.nav-menu__icon-middle.active::before {
+    transform: rotate(45deg);
+    bottom: 0;
+    transition: bottom 0.2s linear, transform 0.2s ease-in 0.2s;
+}
+
+.nav-menu__icon-middle.active::after {
+    transform: rotate(-45deg);
+    top: 0;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+}
